@@ -2,39 +2,31 @@ import { Line } from "react-chartjs-2";
 
 export const LineChart = () => {
   const labels = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   const data = {
     labels: labels,
     datasets: [
       {
-        label: "My First Dataset",
-        data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-          "rgba(255, 205, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(201, 203, 207, 0.2)",
+        label: "Earnings",
+        data: [
+          0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000,
+          25000, 40000,
         ],
-        borderColor: [
-          "rgb(255, 99, 132)",
-          "rgb(255, 159, 64)",
-          "rgb(255, 205, 86)",
-          "rgb(75, 192, 192)",
-          "rgb(54, 162, 235)",
-          "rgb(153, 102, 255)",
-          "rgb(201, 203, 207)",
-        ],
-        borderWidth: 3,
+        backgroundColor: ["#4e73df"],
+        borderColor: ["#4e73df"],
+        borderWidth: 5,
         tension: 0.3,
       },
     ],
@@ -44,14 +36,29 @@ export const LineChart = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: "bottom",
+        labels: {
+          // This more specific font property overrides the global property
+        },
       },
     },
     title: {
       display: true,
       text: "Earnings",
     },
+    scales: {
+      y: {
+        ticks: {
+          stepSize: 10000,
+        },
+      },
+    },
   };
 
-  return <Line data={data} options={options} />;
+  return (
+    <div className="chartComp">
+      <p className="chartTitle">Earnings Overview</p>
+      <Line data={data} options={options} className="lineChart" />
+    </div>
+  );
 };

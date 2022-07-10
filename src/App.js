@@ -13,8 +13,9 @@ import {
   DoughnutController,
   ArcElement,
 } from "chart.js";
-// import { DoughnutChart } from "./DoughnutChart";
-// import { LineChart } from "./LineChart";
+import { NavBar } from "./Components/Search";
+import { ChickletComponents } from "./Components/ChickletComponents";
+import { ChartComponents } from "./Components/ChartComponents";
 
 ChartJS.register(
   CategoryScale,
@@ -32,8 +33,9 @@ ChartJS.register(
 function App() {
   return (
     <div className="App">
-      {/* <LineChart />
-      <DoughnutChart /> */}
+      <NavBar />
+      <ChickletComponents />
+      <ChartComponents />
     </div>
   );
 }

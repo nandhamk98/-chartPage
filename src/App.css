@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background: rgb(216, 214, 214);
+  height: 70px;
+  margin: 0px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.InputComponent {
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+  background-color: white;
+  padding: 8px;
+  margin: 15px;
+  width: 350px;
+  margin-right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  outline: thin;
+  border: 0px;
+}
+
+.searchButton {
+  height: 40px;
+  margin: 15px;
+  margin-left: 0px;
+  border: 0px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgb(71, 139, 202);
+}
+
+.notifcation {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.notifcation > span {
+  font-size: 28px;
+  margin: 0px 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.line {
+  background-color: black;
+  width: 1px;
+  height: 30px;
+}
+
+.profile {
+  border-radius: 50%;
+  background-color: grey;
+}
+
+@media only screen and (max-width: 800px) {
+  /* For tablets: */
+  .profileName {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search {
+    width: 250px;
   }
+}
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .profileName {
+    display: none;
+  }
+
+  .search {
+    width: 150px;
+  }
+}
+
+.chickletComponent {
+  padding: 0px 10px;
+  height: 100px;
+  width: 250px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(200, 200, 200);
+  font-weight: bold;
+  margin: 10px;
+}
+
+.chickletIconConatiner {
+  color: rgb(187, 185, 185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+
+.chickletIcon {
+  font-size: 60px;
+}
+
+.chickletName {
+  font-size: 13px;
+}
+
+.chickletNumber {
+  font-size: 23px;
+  margin: 0px;
+}
+
+.chickletContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+}
+
+.chartComponents {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lineChart {
+  padding: 10px;
+}
+
+.doughnutChart {
+  padding: 10px;
+}
+
+canvas {
+  width: 500px !important;
+  height: 500px !important;
+}
+
+.chartComp {
+  border: 1px solid grey;
+}
+
+.chartTitle {
+  background-color: rgb(214, 214, 214);
+  padding: 0px;
+  margin: 0px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #4e73df;
+  font-weight: bold;
 }
